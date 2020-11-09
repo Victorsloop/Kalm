@@ -1,0 +1,2 @@
+class UserSwag < ApplicationController 
+end 
