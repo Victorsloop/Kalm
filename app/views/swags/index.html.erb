@@ -1,0 +1,7 @@
+<h1> Welcome to our Swag page 🧥🧢💧 !!</h1>
+
+<ul>
+  <% @swag.each do |swag| %>
+    <li><%= link_to swag.name, swag_path(swag) %></li>
+  <% end %>
+</ul> 

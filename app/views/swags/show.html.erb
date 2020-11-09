@@ -1,0 +1,8 @@
+<h4><%= @swag.name %> </h4>
+<%= image_tag @swag.image_url %>
+<br>
+<p> Owner:<% @swag.user.each do |user| %> </p>
+  <li><%= user.name %></li>
+<% end %>
+<br>
+<h3> Price: <%= @swage.price %></h3>
