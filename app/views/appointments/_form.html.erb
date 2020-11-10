@@ -1,0 +1,15 @@
+
+<% if flash[:user_errors] %>
+  <% flash[:user_errors].each do |error| %>
+    <p style="color:red;"><%= error %></p>
+  <% end %>
+<% end  %>
+
+<%= form_for @appointment do |f|%>
+<%= f.hidden_field :user_swag_id, :value => @user_swag.id %>
+
+<%= f.label :date %>
+<%= f.datetime_field :date%>
+<br>
+<%= f.submit "Rent" %>
+<% end %>

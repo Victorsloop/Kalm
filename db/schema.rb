@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_193956) do
+ActiveRecord::Schema.define(version: 2020_11_09_230906) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_11_09_193956) do
     t.string "name"
     t.integer "age"
     t.string "user_name"
-    t.string "password"
+    t.string "password_digest"
   end
 
   add_foreign_key "appointments", "user_swags"

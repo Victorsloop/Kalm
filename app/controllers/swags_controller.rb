@@ -1,11 +1,11 @@
 class SwagsController < ApplicationController
+    before_action :find_swag, only:[:show, :edit, :update, :destroy]
     def index
         @swag = Swag.all
         # render :index
     end
     
     def show
-        @swag = Swag.find(params[:id])
          render :show
     end 
     
@@ -27,12 +27,10 @@ class SwagsController < ApplicationController
       end 
      
       def edit 
-        @swag = Swag.find(params[:id])
         render :edit
       end
       
       def update 
-         @swag = Swag.find(params[:id])
         if @swag.update(swag_params)
           redirect_to swag_path(@swag)
         else
@@ -42,7 +40,6 @@ class SwagsController < ApplicationController
       end 
       
       def destroy 
-        @swag = Swag.find(params[:id])
         @swag.destroy
         redirect_to swags_path
       end 

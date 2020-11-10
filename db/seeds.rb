@@ -7,15 +7,15 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-User_Swag.destory_all
-Swag.destory_all 
-User.destory_all
+UserSwag.destroy_all
+Swag.destroy_all 
+User.destroy_all
 
 puts "Creating your users 🤑"
-User.create!(name: "Karina", age: 18, user_name: , password:)
-User.create!(name: "Victor", age: 21, user_name: , password:)
-User.create!(name: "Greg", age: 24, user_name: , password:)
-User.create!(name: "Drake", age: 27, user_name: , password:)
+User.create!(name: "Karina", age: 18, user_name:"Karina" , password_digest:"password")
+User.create!(name: "Victor", age: 21, user_name:"Victor" , password_digest:"password")
+User.create!(name: "Greg", age: 24, user_name:"User3" , password_digest:"password")
+User.create!(name: "Drake", age: 27, user_name:"User4" , password_digest:"password")
 
 puts "Creating your swag 👒👘👟"
 Swag.create!(name: "Canada Goose", image_url:"https://images.canadagoose.com/image/upload/w_1333,c_scale,f_auto,q_auto:best/v1583261363/product-image/9512M_67_a.jpg" , price:rand(10..100))
@@ -25,8 +25,9 @@ Swag.create!(name: "2019 Bogo", image_url:"https://img.ch-webdev.com/ra/uploads/
 
 puts "Creating User_swag 🕺🏻🧥💃🏻"
 4.times do 
-User_Swag.create!(user_id: User.all.sample.id, swag_id: Swag.all.sample.id, rating:rand(0..5), review:Faker::TvShows::RickAndMorty.quote  )
+UserSwag.create!(user_id: User.all.sample.id, swag_id: Swag.all.sample.id, rating:rand(0..5), review:Faker::TvShows::RickAndMorty.quote)
 end 
+
 # t.references :user
 # t.references :swag
 # t.integer :rating
