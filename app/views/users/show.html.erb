@@ -5,9 +5,16 @@
 <p>Age:<%= @user.age%></p>
 <br>
 
+<p> Past Rented Swag:</p>
+  <ul>
+    <% @user.rented_items.each do |appointment| %>
+      <li>
+        Date: <%= appointment.date %> 
+        <br>
+        Swag: <%= appointment.user_swag.swag.name %> 
+        <br>
+        Owner: <%= appointment.user_swag.user.name %> 
+      </li>
+  <% end %>
 
-<%# <p> Owner:<% @swag.users.each do |user| %> </p>
-  <%# <li><%= user.name %></li> %>
-<%# <% end %> %>
-<%# <br> %>
-<%# <h3> Price: <%= @swag.price %></h3> %> %>
+</ul>

@@ -13,7 +13,14 @@
 
   <ul class= "nav">
   <li><%= link_to "Swag", swags_path %></li>
-  <li><%= link_to "Create a user", new_user_path %></li>
+  
+  <% if @current_user %>
+    <li class="right"> Welcome <%= @current_user.name%>!</li>
+    <li class="right"> <%= link_to 'Log Out', logout_path, method: :delete %></li>
+  <% else %>
+    <li class="right"> <%= link_to 'Log In', new_login_path%>
+    <li class="right"> <%= link_to 'Sign Up', signup_path%>
+  <% end %>
   </ul>
     <%= yield %>
   </body>

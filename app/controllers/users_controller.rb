@@ -16,14 +16,13 @@ class UsersController < ApplicationController
     end 
 
     def create 
-        @user = User.create(swag_params)
-        @user = User.new(swag_params)
+        @user = User.create(user_params)
         if @user.valid?
-            session[:user_id] = user.id
-          redirect_to swag_path(@user)
+            session[:user_id] = @user.id
+          redirect_to user_path(@user)
         else 
-          flash[:swag_errors] = @user.errors.full_messages
-          redirect_to new_swag_path 
+          flash[:user_errors] = @user.errors.full_messages
+          redirect_to new_user_path 
         end 
         # render :show
       end 
@@ -34,7 +33,7 @@ class UsersController < ApplicationController
       
       def update 
         if @user.update(user_params)
-          redirect_to swag_path(@user)
+          redirect_to user_path(@user)
         else
           flash[:user_errors] = @user.errors.full_messages
           redirect_to edit_user_path
@@ -49,7 +48,7 @@ class UsersController < ApplicationController
       private
       
       def user_params
-        params.require(@user).permit(:name, :age, :user_name , :password_digest)
+        params.require(:user).permit(:name, :age, :user_name , :password)
       end 
      
       def find_user

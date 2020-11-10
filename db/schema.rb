@@ -10,12 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_09_230906) do
+ActiveRecord::Schema.define(version: 2020_11_10_222445) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
     t.boolean "availability"
     t.integer "user_swag_id", null: false
+    t.integer "user_id"
     t.index ["user_swag_id"], name: "index_appointments_on_user_swag_id"
   end
 

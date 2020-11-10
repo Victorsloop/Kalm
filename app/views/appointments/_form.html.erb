@@ -6,7 +6,7 @@
 <% end  %>
 
 <%= form_for @appointment do |f|%>
-<%= f.hidden_field :user_swag_id, :value => @user_swag.id %>
+<%= f.hidden_field :user_swag_id, :value => @user_swag_id %>
 
 <%= f.label :date %>
 <%= f.datetime_field :date%>

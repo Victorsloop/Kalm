@@ -8,9 +8,10 @@ Rails.application.routes.draw do
   resources :welcomes
   root 'welcome#index'
 
-  get 'signup', to: 'user#new', as: 'signup'
-  get 'login', to: 'sessions#new', as: 'login'
-  get 'sessions', to: 'sessions#create', as: 'sessions'
+  get 'signup', to: 'users#new', as: 'signup'
+  
+  get '/sessions/new_login', to: 'sessions#new', as: 'new_login'
+  post '/sessions', to: 'sessions#create', as: 'login'
   delete '/sessions/page_reset', to: 'sessions#page_reset', as: 'page_reset'
   delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
   ## We will fix later 
