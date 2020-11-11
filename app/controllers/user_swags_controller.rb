@@ -3,12 +3,14 @@ class UserSwagsController < ApplicationController
     def new
         @user_swag = UserSwag.new
         @user_id = params[:user_id]
+        @user_swag.build_swag
         render :new
     end 
 
+
+
     def create 
         @user_swag = UserSwag.create(user_swag_params)
-        @current_user.user_swags << @user_swag
          if @user_swag.valid?
             redirect_to swag_path(@user_swag)
         else 
@@ -20,7 +22,7 @@ class UserSwagsController < ApplicationController
     private
       
     def user_swag_params
-        params.require(:user_swag).permit(:user_id, :swag_id, :rent , :buy, :rent_price)
+        params.require(:user_swag).permit(:user_id, :rent , :buy, :rent_price, swag_attributes: [:id, :name, :image_url])
     end 
     
 end 
