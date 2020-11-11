@@ -7,6 +7,8 @@ class UserSwagsController < ApplicationController
         render :new
     end 
 
+
+
     def create 
         @user_swag = UserSwag.create(user_swag_params)
          if @user_swag.valid?
