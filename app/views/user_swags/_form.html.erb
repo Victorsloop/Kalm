@@ -1,0 +1,24 @@
+<% if flash[:user_swag_errors] %>
+  <% flash[:user_swag_errors].each do |error| %>
+    <p style="color:red;"><%= error %></p>
+  <% end %>
+<% end  %>
+#Fix This As Well
+<%= form_for @user_swag do |f|%>
+<%= f.hidden_field :user_id, :value => @current_user.id %>
+<%= f.label :swag_name, 'Name' %>
+<%= f.text_field :swag_name, list: "established_items" %>
+    <datalist id="established_items">
+        <% Swag.all.each do |swag| %>
+            <option value="<%= Swag.name %>"></option>
+        <% end %>
+    </datalist>
+<br>
+<%= f.label :swag_image, 'Image' %>
+<%= f.text_field :swag_image %>
+<br>
+Rent: <%= f.check_box :rent %> <br>
+Sell: <%= f.check_box :buy %> <br>
+<br>
+<%= f.submit "Post Your Swag" %>
+<% end %>
