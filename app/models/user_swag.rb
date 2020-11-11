@@ -1,6 +1,7 @@
 class UserSwag < ApplicationRecord 
     belongs_to :user 
     belongs_to :swag
+    accepts_nested_attributes_for :swag
     # validates :swag_id, uniqueness:true
     
 
