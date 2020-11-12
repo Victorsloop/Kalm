@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+##Easiest and least complex css styling
+gem "bulma-rails", "~> 0.8.0"
+##Added for css styling
+gem 'materialize-sass', '~> 1.0.0'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'

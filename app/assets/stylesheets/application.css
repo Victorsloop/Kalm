@@ -15,7 +15,7 @@
  */
 
  .nav {
-    background-color: #FD615A;
+    background-color: #1b50c2;
     
     height: 30px;
     width: 90%;
@@ -33,7 +33,7 @@
    }
   
    .nav li:hover {
-     background-color: #F93072;
+     background-color: #9e30f9;
      transition: 1s;
    }
   
@@ -46,4 +46,23 @@
   
   .right {
     float: right;
+  }
+  /*Should be the css for a form but isnt working i dont understand why */
+  .form-container {
+    max-width: 300px;
+    margin: 0px auto;
+    background-color: rgba(249, 48, 114, 0.2);
+    padding: 20px;
+    border-radius: 25px;
+    text-align: center;
+  }
+  
+  .form-btn {
+    background-color: rgb(249, 48, 114);
+    margin-top: 10px;
+    border-radius: 25px;
+  }
+  
+  .form-input {
+    margin-top: 10px;
   }

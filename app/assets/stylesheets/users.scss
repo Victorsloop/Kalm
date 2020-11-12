@@ -1,0 +1,55 @@
+// Place all the styles related to the Users controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: https://sass-lang.com/
+
+.users-new-div {
+    background-color: rgba(241, 110, 63, 0.568);
+    width: 80%;
+    margin: 0px auto;
+    text-align: center;
+    
+}
+
+.users-new-div a {
+    text-decoration: none;
+    color: darkgoldenrod;
+}
+
+.users-new-div h1 {
+    margin: 10px 0px 0px 0px;
+}
+
+
+
+// USER SHOW 
+
+.users-show-div {
+    // background-color: rgb(236, 163, 154);
+    border: 50px dashed rgba(0, 0, 128, .75);
+    padding: 10px; //, 10px, 10px, 10px;
+    
+    width: 72%;
+    margin: 0px auto;
+    text-align: center;
+
+    // list-style-type: none;
+    // text-decoration: none;
+    
+}
+
+.users-show-div ul{
+
+    list-style-type: none;
+
+}
+
+.users-show-div a {
+    text-decoration: none;
+    color: darkgoldenrod;
+
+    // border: 5px dashed rgba(0, 0, 128, .75);
+}
+
+.users-show-div h1 {
+    margin: 10px 0px 0px 0px;
+}
