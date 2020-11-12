@@ -8,13 +8,15 @@
 <h2> Owner:<% @swag.user_swags.each do |user_swag| %> 
   <%= user_swag.user.name %> </h2>
   <h3> Rent Price: $<%= user_swag.rent_price%> </h3>
-<%= form_tag new_appointment_path, method: :get do %>
-<%= hidden_field_tag "user_swag_id", user_swag.id%>
-<%= submit_tag "Rent🧧"%>
+  <% if @current_user.present? %>
+    <%= form_tag new_appointment_path, method: :get do %>
+    <%= hidden_field_tag "user_swag_id", user_swag.id%>
+    <%= submit_tag "Rent🧧"%>
+    <% end %>
+  <%= button_to "Buy 💲", swag_path, method: :delete  %>
+  <% end %> 
+  <br>
 <% end %>
-<% end %> 
-<br>
-<%= button_to "Buy 💲", swag_path, method: :delete  %>
 <br>
 
 
