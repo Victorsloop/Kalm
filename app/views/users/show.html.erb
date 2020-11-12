@@ -1,12 +1,21 @@
-<h4><%= @user.name %> </h4>
+<h1><%= @user.name %> </h1>
 <br>
-<p>Username:<%= @user.user_name%></p>
+<p>Username: <%= @user.user_name%></p>
 <br>
-<p>Age:<%= @user.age%></p>
+<p>Age: <%= @user.age%></p>
 <br>
 
-<p> Past Rented Swag:</p>
-  <ul>
+<h3> Your Listed Swag</h3>
+<ul>
+  <% @user.swags.each do |swag| %>
+  <li>
+    <%= swag.name %>
+  </li>
+  <% end %>
+</ul>
+
+<h3> Rented Swag:</h3>
+<ul>
     <% @user.rented_items.each do |appointment| %>
       <li>
         Date: <%= appointment.date %> 
@@ -16,5 +25,4 @@
         Owner: <%= appointment.user_swag.user.name %> 
       </li>
   <% end %>
-
 </ul>

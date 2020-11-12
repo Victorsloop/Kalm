@@ -1,3 +1,6 @@
+<div class="form-container">
+<h1> Rent Out Your Swag </h1>
+
 <% if flash[:user_swag_errors] %>
   <% flash[:user_swag_errors].each do |error| %>
     <p style="color:red;"><%= error %></p>
@@ -8,16 +11,25 @@
 <%= form_for(@user_swag) do |f|%>
     <%= f.hidden_field :user_id, :value => @current_user.id %>
     <%= f.fields_for :swag do |swag| %>
+        <div class="form-input">
         <%= swag.label :name %>
-        <%= swag.text_field :name %> <br>
-
-        <%= swag.label :image_url %>
-        <%= swag.text_field :image_url %> <br>
+        <%= swag.text_field :name %> 
+        </div>
+        <br>
+        <div class="form-input">
+        <%= swag.label :image %>
+        <%= swag.text_field :image_url %> 
+        </div>
+        <br>
     <% end %>
-    Rent: <%= f.check_box :rent %> <br>
-    Sell: <%= f.check_box :buy %> <br>
+    <div class="form-input">
+    <%= f.label 'Price' %>
+    <%= f.number_field :rent_price %> 
+    </div>
+    <br>
+
+    Rent: <%= f.check_box :rent %> Sell: <%= f.check_box :buy %> <br>
+    <br>
     <%= f.submit "Post Your Swag" %>
 <% end %>
-
-
-  
+</div>

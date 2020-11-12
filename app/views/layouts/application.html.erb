@@ -16,7 +16,7 @@
   
   <% if @current_user %>
     <li> <%= link_to 'Rent Out or Sell Your Swag!', new_user_swag_path %> </li>
-    <li class="right"> Welcome <%= @current_user.name%>!</li>
+    <li class="right"> <%= link_to "Welcome #{@current_user.name}!", user_path(@current_user)%></li>
     <li class="right"> <%= link_to 'Log Out', logout_path, method: :delete %></li>
   <% else %>
     <li class="right"> <%= link_to 'Log In', new_login_path%>

@@ -1,15 +1,19 @@
 
+<div class="form-container">
+<h1> New Appointment </h1>
 <% if flash[:user_errors] %>
   <% flash[:user_errors].each do |error| %>
     <p style="color:red;"><%= error %></p>
   <% end %>
 <% end  %>
 
-<%= form_for @appointment do |f|%>
+<%= form_for(@appointment) do |f|%>
 <%= f.hidden_field :user_swag_id, :value => @user_swag_id %>
-
+<div class="form-input">
 <%= f.label :date %>
 <%= f.datetime_field :date%>
+</div>
 <br>
 <%= f.submit "Rent" %>
 <% end %>
+</div>

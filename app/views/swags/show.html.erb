@@ -1,22 +1,21 @@
-<h4><%= @swag.name %> </h4>
+<h1><%= @swag.name %> </h1>
 <%= image_tag @swag.image_url %>
 <br>
 <%#button_to "Rent🧧", "/appointments/new?swag_id=#{@swag.id}", method: :get  %>
 
 <br>
-<%= button_to "Buy 💲", swag_path, method: :delete  %>
 
-<p> Owner:<% @swag.user_swags.each do |user_swag| %> </p>
-  <li><%= user_swag.user.name %></li>
-  <%= form_tag new_appointment_path, method: :get do %>
+<h2> Owner:<% @swag.user_swags.each do |user_swag| %> 
+  <%= user_swag.user.name %> </h2>
+  <h3> Rent Price: $<%= user_swag.rent_price%> </h3>
+<%= form_tag new_appointment_path, method: :get do %>
 <%= hidden_field_tag "user_swag_id", user_swag.id%>
 <%= submit_tag "Rent🧧"%>
-<%end %>
 <% end %>
-
+<% end %> 
 <br>
-<<<<<<< HEAD
-<h3> Price: <%# @swag.price %></h3>
-=======
-<%#h3> Price: <%= @swag.price %><%#/h3>
->>>>>>> c305018e7a05fd5e46a49f62d75b62b28eead0c4
+<%= button_to "Buy 💲", swag_path, method: :delete  %>
+<br>
+
+
+
