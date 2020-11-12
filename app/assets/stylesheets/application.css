@@ -18,8 +18,9 @@
     background-color: #1b50c2;
     
     height: 30px;
-    width: 90%;
-    margin: 0px auto;
+    width: 100%;
+    font: 15px sans-serif;
+    margin: 0px 0px 16px;
     padding: 0px;
   }
   
