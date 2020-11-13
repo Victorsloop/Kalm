@@ -20,6 +20,7 @@
     color: white;
     text-align: center;
     font-weight: 500;
+    text-shadow: 0 0 5px #d10808, 0 0 10px #d10808, 0 0 15px #d10808, 0 0 20px #d10808, 0 0 20px #d10808, 0 0 20px #d10808, 0 0 20px #d10808;
 }
 
 #items {
@@ -38,10 +39,12 @@
 }
 
 .small-header {
-    color: #a00303;
+    color: #ffffff;
     font-size: 30px;
     text-align: center;
     padding-top: 5px;
+    font-weight: bold;
+    text-shadow: 0 0 5px #d10808, 0 0 10px #d10808, 0 0 15px #d10808, 0 0 20px #d10808, 0 0 20px #d10808, 0 0 20px #d10808, 0 0 20px #d10808;
 }
 
 #items li {

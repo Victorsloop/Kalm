@@ -1,6 +1,10 @@
 
+<!DOCTYPE html>
+<html>
+<body class="ff-bg">
+  
 <div class="form-container">
-  <h1> Sign Up </h1>
+  <h1 class="form-header"> Sign Up </h1>
   <% if flash[:user_errors] %>
     <% flash[:user_errors].each do |error| %>
       <p style="color:red;"><%= error %></p>
@@ -31,6 +35,8 @@
     <%= f.submit "SignUp", class: "form-btn" %>
   <% end %>
 </div>
+</body>
+</html>
 
 
 

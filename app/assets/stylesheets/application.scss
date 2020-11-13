@@ -67,24 +67,38 @@
   .form-container {
     max-width: 300px;
     margin: 0px auto;
-    background-color: rgba(249, 48, 114, 0.2);
+    background-color: #740505;
     padding: 20px;
     border-radius: 25px;
     text-align: center;
   }
+
+  .form-header{
+    color: whitesmoke;
+    font-weight: bold;
+    background-color: transparent;
+  }
   
   .form-btn {
-    background-color: rgb(249, 48, 114);
     margin-top: 10px;
     border-radius: 25px;
   }
   
   .form-input {
     margin-top: 10px;
+    padding-top: 10px;
+    color: whitesmoke;
+    font-weight: bold;
   }
   #form-bg {
     // background-image: url(https://images.unsplash.com/photo-1516893842880-5d8aada7ac05?ixlib=rb-1.2.1&w=1000&q=80);
     background-image:url(https://wallpaperaccess.com/full/688900.jpg);
+    background-position: center;
   
   
+  }
+
+  .ff-bg {
+    background-image: url(https://cdn.shopify.com/s/files/1/1451/7422/products/Gotham_Red-web_copy_2048x2048.jpg?v=1525818713);
+    background-position: center;
   }
