@@ -1,24 +1,26 @@
-# README
+# KΛLM
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+### Karina G && Victor T
 
-Things you may want to cover:
+Welcome to our Mod 2 Project! KΛLM is a rails powered project that allows a user to becom a part of the culture and either rent and or sell among many others.
 
-* Ruby version
+As a user, I want to:
+* User can create a profile
+* User can sign in and logout
+* User can view the swag of many other sellers
+* User can rent/buy swag for a specific date and time
+* Users past rentals will be visible on his profile page
 
-* System dependencies
+As a seller, I want to: 
+* Seller can view his listings
+* Seller can post his own swag for rent or selling purposes
 
-* Configuration
+## Installation
+1. clone this repository
+2. run bundle install to install the necessary gems
+3. run rails db:migrate
+4. Start the server with rails s 
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Sources
+* Bootstrap
+* Online imagery
