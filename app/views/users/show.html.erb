@@ -1,28 +1,42 @@
-<h1><%= @user.name %> </h1>
-<br>
-<p>Username: <%= @user.user_name%></p>
-<br>
-<p>Age: <%= @user.age%></p>
-<br>
-
-<h3> Your Listed Swag</h3>
-<ul>
-  <% @user.swags.each do |swag| %>
-  <li>
-    <%= swag.name %>
-  </li>
-  <% end %>
-</ul>
-
-<h3> Rented Swag:</h3>
-<ul>
-    <% @user.rented_items.each do |appointment| %>
-      <li>
-        Date: <%= appointment.date %> 
-        <br>
-        Swag: <%= appointment.user_swag.swag.name %> 
-        <br>
-        Owner: <%= appointment.user_swag.user.name %> 
-      </li>
-  <% end %>
-</ul>
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>KΛLM</title>
+  </head>
+  <body id="user-bg">
+    <div id="user-info">
+      <h1 id="user-header"><%= @user.name %> </h1>
+      <br>
+      <p class="info"><span style="color:#a00303">Username:</span> <%= @user.user_name%></p>
+      <br>
+      <p class="info"><span style="color:#a00303">Age:</span> <%= @user.age%></p>
+      <br>
+    </div>
+    <div id="items">
+      <h3 class="small-header"> Your Listings</h3>
+      <ul>
+        <% @user.swags.each do |swag| %>
+        <li>
+          <%= swag.name %>
+        </li>
+        <% end %>
+      </ul>
+    </div>
+    <div id="items">
+      <h3 class="small-header"> Rented Items:</h3>
+      <ul>
+          <% @user.rented_items.each do |appointment| %>
+          <br>
+            <li>
+              <span style="color:#a00303;font-size:20px;font-weight:bold">Date:</span> <%= appointment.date %> 
+              <br>
+              <span style="color:#a00303;font-size:20px;font-weight:bold">Item:</span> <%= appointment.user_swag.swag.name %> 
+              <br>
+              <span style="color:#a00303;font-size:20px; font-weight:bold">Owner:</span> <%= appointment.user_swag.user.name %> 
+              <br>
+            </li>
+        <% end %>
+      </ul>
+    </div>
+  </body>
+</html>

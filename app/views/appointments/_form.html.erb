@@ -1,11 +1,13 @@
-
-<div class="form-container">
-<h1> New Appointment </h1>
-<% if flash[:user_errors] %>
-  <% flash[:user_errors].each do |error| %>
-    <p style="color:red;"><%= error %></p>
-  <% end %>
-<% end  %>
+<head >
+<link rel="stylesheet" href="swag.css">
+  <body id="swagform">
+  <div class="form-container">
+    <h1> New Appointment </h1>
+      <% if flash[:user_errors] %>
+      <% flash[:user_errors].each do |error| %>
+      <p style="color:red;"><%= error %></p>
+      <% end %>
+      <% end  %>
 
 <%= form_for(@appointment) do |f|%>
 <%= f.hidden_field :user_swag_id, :value => @user_swag_id %>
@@ -17,3 +19,5 @@
 <%= f.submit "Rent" %>
 <% end %>
 </div>
+    </body>
+      </head>

@@ -6,7 +6,7 @@
     <p style="color:red;"><%= error %></p>
   <% end %>
 <% end  %>
-
+<body id="form-bg">
 
 <%= form_for(@user_swag) do |f|%>
     <%= f.hidden_field :user_id, :value => @current_user.id %>
@@ -37,4 +37,5 @@
     <br>
     <%= f.submit "Post Your Swag" %>
 <% end %>
+</body>
 </div>

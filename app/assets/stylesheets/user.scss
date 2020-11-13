@@ -1,0 +1,50 @@
+#user-bg {
+    background-image: url(https://www.bridgeable.com/wp-content/uploads/NYCT_hero.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#user-info {
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 25px;
+    float: left;
+    width: 300px;
+    height: 250px;
+    margin-left: 10px;
+    padding-left: 10px;
+}
+
+#user-header{
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 25px;
+    color: white;
+    text-align: center;
+    font-weight: 500;
+}
+
+#items {
+    background-color: rgba(0, 0, 0, 0.897);
+    border-radius: 25px;
+    float: left;
+    width: 500px;
+    height: 620px;
+    margin-left: 40px;
+    padding-left: 10px;
+}
+
+.info {
+    color: white;
+    font-size: 25px;
+}
+
+.small-header {
+    color: #a00303;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 5px;
+}
+
+#items li {
+    color: whitesmoke;
+    list-style-type: square;
+}

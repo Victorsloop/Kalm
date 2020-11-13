@@ -1,22 +1,68 @@
 /*External style sheets targeting whatever is soley in ul */
 /*The asteris basically selects everything within the page and this is just to add a border to be able to see */
-* {
+.boxBG, .small_hedding, .card-text>p{
     border: 1px solid black
 }
-body {
-    background-color: lightgrey;
+#show-bg {
+    background-color: black;
 }
-ul{
-    background-color: rgb(255, 214, 127);
-}
+// ul{
+//     background-color: rgb(255, 214, 127);
+// }
 h1{
-    background-color: rgb(71, 71, 180);
+    background-color: rgb(143, 25, 9);
 }
 /*Everything withing that html.erb will be affected in the same way, so this hits the swags index and show page  */
 .boxBG{
-  background-color: #1B3B6F
+  background-color: #b36464
 }
 
 .small_hedding, .card-text>p{
   color: #fdfdff
+}
+/* This will affect the body of the show page for swag*/
+#swagshow {
+  background-color: gray;
+  background-image: url(https://images.unsplash.com/photo-1534270804882-6b5048b1c1fc?ixlib=rb-1.2.1&w=1000&q=80);
+  background-position: center;
+  // background-size: cover;
+}
+.swagowner {
+  background-color: rgba(145, 34, 0, 0.925);
+}
+.swagprice{
+  background-color: rgb(129, 115, 129);
+}
+// .swagimage{
+//   flex-flow:row wrap;
+// }
+
+.scontainer {
+  border: 1px solid brown;
+  display: flex;
+  max-width: 70%;
+  margin: 0px auto;
+
+  flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.stile {
+  border: 1px solid teal;
+  background-color: teal;
+  padding: 10px;
+  text-align: center;
+  margin: 10px 0px;
+}
+
+
+.swag-img {
+  max-width: 150px;
+}
+
+/* Form for user swag here */
+#swagform {
+  background-image: url(https://media.gq.com/photos/5a7a30cc8f045079315a6adb/1:1/w_1296,h_1296,c_limit/flight-club-goat-merger-gq.jpg);
+   background-position: center;
+
 }
