@@ -14,11 +14,12 @@ h1{
 }
 /*Everything withing that html.erb will be affected in the same way, so this hits the swags index and show page  */
 .boxBG{
-  background-color: #b36464
+  background-color: #7e0d0d;
+  border-radius: 25px;
 }
 
-.small_hedding, .card-text>p{
-  color: #fdfdff
+.small_hedding, .card-text{
+  color: #fdfdff;
 }
 /* This will affect the body of the show page for swag*/
 #swagshow {
@@ -65,4 +66,12 @@ h1{
   background-image: url(https://media.gq.com/photos/5a7a30cc8f045079315a6adb/1:1/w_1296,h_1296,c_limit/flight-club-goat-merger-gq.jpg);
    background-position: center;
 
+}
+
+.glow {
+  font-size: 40px;
+    color: #ffffff;
+    text-align: center;
+    background-color: transparent;
+    text-shadow: 0 0 5px #d10808, 0 0 10px #d10808, 0 0 15px #d10808, 0 0 20px #d10808, 0 0 20px #d10808, 0 0 20px #d10808, 0 0 20px #d10808;
 }
