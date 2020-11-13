@@ -3,9 +3,10 @@
   <div class="card-text">
     <p class="text-center small_hedding">
       <%=swag.name%>
-    </p> <% @location= Faker::TvShows::Friends.location %>
+    </p> <%# @location= Faker::TvShows::Friends.location %>
+    <% @location= ["Yankee Stadium", "Queens", "Astoria", "LES", "UES","Fulton", "Brooklyn Bridge", "Timesqaure", "Grandcentral","Central Park" ]%>
     <p class="text-center"><%="Rent for the day or Buy "%></p>
-    <p class="text-center"><%="Location: #{@location} "%></p>
+    <p class="text-center"><%="Location: #{@location.sample} "%></p>
 </div>
 </div>
 
