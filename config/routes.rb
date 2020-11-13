@@ -13,7 +13,8 @@ Rails.application.routes.draw do
   get '/sessions/new_login', to: 'sessions#new', as: 'new_login'
   post '/sessions/new_login', to: 'sessions#create', as: 'login'
   delete '/sessions/page_reset', to: 'sessions#page_reset', as: 'page_reset'
+  get 'sessions/logout', to: 'sessions#logout', as: 'now_logout'
   delete '/sessions/logout', to: 'sessions#logout', as: 'logout'
-  ## We will fix later 
+ 
   
 end

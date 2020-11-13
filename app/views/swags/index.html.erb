@@ -2,17 +2,17 @@
 <link rel="stylesheet" href="swag.css">
 <h1> Welcome to our Swag page 🧥🧢💧 !!</h1>
 
-      <div class="contain">
-  <section class="text">
+      <div class="container mt-4">
+  <section class="text-center">
     <h1 class="">All Listings</h1>
   </section>
 </div>
 
-<div class="album">
-  <div class="contain">
+<div class="album py-1">
+  <div class="container">
     <div class="row">
       <% @swag.each do |swag| %>
-        <div class="col">
+        <div class="col-md-4">
           <%=render partial: "swag_summary", locals: { swag: swag } %>
         </div>
       <%end%>

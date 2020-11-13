@@ -3,6 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.1'
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
+gem 'bootstrap', '~> 5.0.0.alpha2' ## For the cards
+gem 'sprockets-rails', :require => 'sprockets/railtie'
+gem 'jquery-rails'
 ##Easiest and least complex css styling
 gem "bulma-rails", "~> 0.8.0"
 ##Added for css styling

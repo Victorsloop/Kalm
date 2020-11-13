@@ -1,0 +1,22 @@
+/*External style sheets targeting whatever is soley in ul */
+/*The asteris basically selects everything within the page and this is just to add a border to be able to see */
+* {
+    border: 1px solid black
+}
+body {
+    background-color: lightgrey;
+}
+ul{
+    background-color: rgb(255, 214, 127);
+}
+h1{
+    background-color: rgb(71, 71, 180);
+}
+/*Everything withing that html.erb will be affected in the same way, so this hits the swags index and show page  */
+.boxBG{
+  background-color: #1B3B6F
+}
+
+.small_hedding, .card-text>p{
+  color: #fdfdff
+}
