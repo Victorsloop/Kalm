@@ -29,20 +29,20 @@ h1{
   // background-size: cover;
 }
 .swagowner {
-  background-color: rgba(145, 34, 0, 0.925);
+  color: #910404;
 }
 .swagprice{
-  background-color: rgb(129, 115, 129);
+  color: white;
 }
 // .swagimage{
 //   flex-flow:row wrap;
 // }
 
 .scontainer {
-  border: 1px solid brown;
   display: flex;
   max-width: 70%;
   margin: 0px auto;
+  float: left;
 
   flex-flow: row wrap;
   justify-content: space-around;
@@ -53,12 +53,22 @@ h1{
   background-color: teal;
   padding: 10px;
   text-align: center;
-  margin: 10px 0px;
+  margin: 22px 0px;
 }
 
 
 .swag-img {
   max-width: 150px;
+}
+
+.swag-container {
+  background-color: black;
+  height: 190px;
+}
+
+.swag-header {
+  color: white;
+  background-color: #910404;
 }
 
 /* Form for user swag here */

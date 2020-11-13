@@ -1,46 +1,44 @@
 <head>
-<link rel="stylesheet" href="swag.css">
-<div class="swagimage">
-<h1><%= @swag.name %> </h1>
-<%= image_tag @swag.image_url, :align=> "middle" %>
-</div>
-<br>
-<%# This little extra square, is our KALM certification it pushes the price to the right %>
- <div class='scontainer'>
-      <div class='stile'><% @swag.user_swags.each do |user_swag| %> 
-        <h3> HIGH DEMAND </h3>
-        <p>KɅ Certified</p>
-        <img class="swag-img" src= "https://image.shutterstock.com/image-vector/ka-letter-logo-design-template-260nw-1117055993.jpg" >
-        <%end%>
-      </div>
-
-      </head>
-
-<%#button_to "Rent🧧", "/appointments/new?swag_id=#{@swag.id}", method: :get  %>
-
-<br>
-<div>
-  <ul>
-  <body id="swagshow">
-<h2 class="swagowner"> Owner:<% @swag.user_swags.each do |user_swag| %> 
-  <%= user_swag.user.name %> </h2>
-  <h3 class="swagprice"> Rent Price: $<%= user_swag.rent_price%> </h3>
-  <h3 class="swagprice"> Buy Price: $<%= user_swag.buy_price%> </h3>
-  <% if @current_user.present? %>
-    <%= form_tag new_appointment_path, method: :get do %>
-    <%= hidden_field_tag "user_swag_id", user_swag.id%>
-    <%= submit_tag "Rent🧧"%>
-    <% end %>
-  <%= button_to "Buy 💲", swag_path, method: :delete  %>
-  <% end %> 
+  <link rel="stylesheet" href="swag.css">
+</head>
+  <div class="swagimage">
+    <h1 class="swag-header"><%= @swag.name %> </h1>
+    <%= image_tag @swag.image_url, :align=> "middle", :width=>"400", :height=>"auto" %>
+  </div>
   <br>
-<% end %>
-<br>
+<%# This little extra square, is our KALM certification it pushes the price to the right %>
+  <div class='scontainer'>
+    <div class='stile'><% @swag.user_swags.each do |user_swag| %> 
+      <h3> HIGH DEMAND </h3>
+      <p>KɅ Certified</p>
+      <img class="swag-img" src= "https://image.shutterstock.com/image-vector/ka-letter-logo-design-template-260nw-1117055993.jpg" >
+      <%end%>
+    </div>
+  </div>
+  <%#button_to "Rent🧧", "/appointments/new?swag_id=#{@swag.id}", method: :get  %>
+  <br>
+  <div>
+    <ul>
+    <body id="swagshow">
+      <div class="swag-container">
+      <h2 class="swagowner"> Owner:<% @swag.user_swags.each do |user_swag| %> 
+        <%= user_swag.user.name %> </h2>
+        <h3 class="swagprice"> Rent Price: $<%= user_swag.rent_price%> </h3>
+        <h3 class="swagprice"> Buy Price: $<%= user_swag.buy_price%> </h3>
+        <% if @current_user.present? %>
+          <%= form_tag new_appointment_path, method: :get do %>
+            <%= hidden_field_tag "user_swag_id", user_swag.id%>
+            <%= submit_tag "Rent🧧"%>
+          <% end %>
+          <%= button_to "Buy 💲", swag_path, method: :delete  %>
+        <% end %> 
+        <br>
+      <% end %>
+      <br>
+    </ul>
+      </div>
+  </div>
 </body>
-  </ul>
-</div>
 
-
-      </head>
 
 
