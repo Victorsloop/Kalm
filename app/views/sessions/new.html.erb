@@ -1,6 +1,11 @@
 <div class="form-container">
 <h1> Log In </h1>
 
+<% if flash[:login_error]%>
+    <p style="color:red;"><%= flash[:login_error]%></p>
+<% end %>
+
+
 <%= form_for :session, url: login_path do |f| %>
     <div class="form-input">
     <%= f.label :username %>

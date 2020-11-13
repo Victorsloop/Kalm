@@ -11,7 +11,8 @@
 
   <body>
 
-  <ul class= "nav">
+  <nav class= "nav">
+  <a id= "nav-brand" href="http://localhost:3000/"> K<span style="color: red">Λ</span>LM </a>
   <li><%= link_to "Swag", swags_path %></li>
   
   <% if @current_user %>
@@ -22,7 +23,7 @@
     <li class="right"> <%= link_to 'Log In', new_login_path%>
     <li class="right"> <%= link_to 'Sign Up', signup_path%>
   <% end %>
-  </ul>
+  </nav>
     <%= yield %>
   </body>
 </html>

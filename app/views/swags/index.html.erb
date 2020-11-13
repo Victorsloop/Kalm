@@ -1,7 +1,24 @@
+<head>
+<link rel="stylesheet" href="swag.css">
 <h1> Welcome to our Swag page 🧥🧢💧 !!</h1>
 
-<ul>
-  <% @swag.each do |swag| %>
-    <li><%= link_to swag.name, swag_path(swag) %></li>
-  <% end %>
-</ul> 
+      <div class="contain">
+  <section class="text">
+    <h1 class="">All Listings</h1>
+  </section>
+</div>
+
+<div class="album">
+  <div class="contain">
+    <div class="row">
+      <% @swag.each do |swag| %>
+        <div class="col">
+          <%=render partial: "swag_summary", locals: { swag: swag } %>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</div>
+     
+ 
+</head>

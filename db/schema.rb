@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_11_11_035503) do
+ActiveRecord::Schema.define(version: 2020_11_12_201700) do
 
   create_table "appointments", force: :cascade do |t|
     t.datetime "date"
@@ -33,6 +33,8 @@ ActiveRecord::Schema.define(version: 2020_11_11_035503) do
     t.boolean "rent"
     t.boolean "buy"
     t.integer "rent_price"
+    t.string "condition"
+    t.integer "buy_price"
     t.index ["swag_id"], name: "index_user_swags_on_swag_id"
     t.index ["user_id"], name: "index_user_swags_on_user_id"
   end

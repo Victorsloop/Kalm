@@ -13,36 +13,51 @@
  *= require_tree .
  *= require_self
  */
+ @import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;600&display=swap');
+
+ body {
+  margin: 0;
+}
 
  .nav {
-    background-color: #1b50c2;
+    background-color: #000000;
     
-    height: 30px;
+    height: 40px;
     width: 100%;
-    font: 15px sans-serif;
+    font: 25px sans-serif;
     margin: 0px 0px 16px;
     padding: 0px;
+  }
+
+  #nav-brand {
+    font-size: 22px;
+    font-weight: 800;
+    float: left;
+  }
+
+  .nav a {
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    font: 15px sans-serif;
+    padding: 8px;
   }
   
    .nav li {
      /* border: 1px solid black; */
      display: inline-block;
-     line-height: 30px;
+     line-height: 40px;
+     font: 15px sans-serif;
      padding: 0px 15px;
      margin: 0px;
   
    }
   
    .nav li:hover {
-     background-color: #9e30f9;
-     transition: 1s;
+     background-color: #7e0303;
+     
    }
   
-   .nav li a {
-    text-decoration: none;
-    color: whitesmoke;
-    font-weight: 800;
-  }
   
   
   .right {
